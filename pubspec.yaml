@@ -1,6 +1,6 @@
 name: internal_ssh_integration
 description: Help developers generate ssh keys and directions on how to use them to interact with the hubtel internal sdk's
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/hubtel/internal_ssh_integration
 
 environment:
