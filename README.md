@@ -11,7 +11,10 @@ Help developers generate ssh keys and directions on how to use them to interact 
 Add Internal SSH Integration to your `pubspec.yaml` in `dev_dependencies:` section.
 ```yaml
 dev_dependencies:
-  internal_ssh_integration: ^1.0.0
+  internal_ssh_integration:
+  git:
+    url: https://github.com/hubtel/internal_ssh_integration.git
+    ref: v1.0.0
 ```
 
 
