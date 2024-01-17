@@ -8,7 +8,7 @@ class SSHKeyGenerator {
 
     // Define the path to the SSH key
     var homeDir = Platform.environment['HOME'];
-    var sshKeyPath = '$homeDir/.ssh/id_rsa.pub';
+    var sshKeyPath = '$homeDir/.ssh/id_rsa';
 
     // Check if the SSH key already exists
     if (!await File(sshKeyPath).exists()) {
@@ -25,7 +25,7 @@ class SSHKeyGenerator {
 
     // Read and print the public key
     print("Your public SSH key is:");
-    print((await File(sshKeyPath).readAsString()).trim());
+    print((await File("$sshKeyPath.pub").readAsString()).trim());
 
     // Print instructions for the user
     print("\nCopy the public key above to your clipboard.\n"
