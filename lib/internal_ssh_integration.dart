@@ -16,7 +16,7 @@ class SSHKeyGenerator {
 
       // Generate the SSH key
       await Process.run('ssh-keygen',
-          ['-t', 'rsa', '-b', '2048', '-f', sshKeyPath, '-N', '""']);
+          ['-t', 'rsa', '-b', '2048', '-f', sshKeyPath, '-N', '']);
     } else {
       print("SSH key already exists.");
     }
