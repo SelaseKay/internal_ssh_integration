@@ -14,7 +14,7 @@ dev_dependencies:
   internal_ssh_integration:
   git:
     url: https://github.com/hubtel/internal_ssh_integration.git
-    ref: v1.0.5
+    ref: v1.0.6
 ```
 
 

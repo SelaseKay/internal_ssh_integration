@@ -8,7 +8,7 @@ class SSHKeyGenerator {
 
     // Define the path to the SSH key
     var homeDir = Platform.environment['HOME'];
-    var sshKeyPath = '$homeDir/.ssh/id_hubtel_rsa';
+    var sshKeyPath = '$homeDir/.ssh/id_rsa';
 
     // Check if the SSH key already exists
     if (!await File(sshKeyPath).exists()) {
