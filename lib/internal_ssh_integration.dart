@@ -7,7 +7,7 @@ class SSHKeyGenerator {
     print("\nRunning SSH key generation...\n");
 
     // Define the path to the SSH key
-    var homeDir = Platform.environment['HOME'];
+    var homeDir =_getHomeDir();
     var sshKeyPath = '$homeDir/.ssh/id_rsa';
 
     // Check if the SSH key already exists
@@ -30,5 +30,16 @@ class SSHKeyGenerator {
     // Print instructions for the user
     print("\nCopy the public key above to your clipboard.\n"
         "Follow the instructions at http://bit.ly/3SotbOH to add this key to your server.");
+  }
+
+  static String? _getHomeDir() {
+    if (Platform.isMacOS) {
+      return Platform.environment['HOME'];
+    } else if (Platform.isLinux) {
+      return Platform.environment['HOME'];
+    } else if (Platform.isWindows) {
+      return Platform.environment['UserProfile'];
+    }
+    return null;
   }
 }
